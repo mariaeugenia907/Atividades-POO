@@ -1,0 +1,19 @@
+01. a) Não Compilou, o erro está no uso das aspas, que deviam ser retiradas ja que é pedido um numero inteiro.
+
+q01.ts:2:1 - error TS2322: Type 'string' is not assignable to type 'number'.
+
+2 a = "2";
+  ~
+
+
+Found 1 error.
+
+b)compilou
+c)compilou
+
+2)a) 3
+b)12
+c)NaN
+
+
+
