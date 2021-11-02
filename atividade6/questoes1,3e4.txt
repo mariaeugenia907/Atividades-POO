@@ -1,0 +1,9 @@
+1- Sim, isso porque temos variaveis que devem ser inicializadas e isso deve ser feito antes do uso.
+Além disso, essas tambem precisam ser declaradas no metodo.
+
+3- o erro que se apresenta é a falta de parâmetro, eu coloquei um paraentro para compilar.
+
+4-O resultado das operações de c1 e c2 deu 90. Isso ocorreu porque o conteúdo de ambas serão iguais.
+
+
+
