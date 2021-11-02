@@ -1,0 +1,70 @@
+1- A Classe é a representação da estrutura do objeto, alem de representar uma abstração de objeto.
+Sendo que a classe define elementos de dados que um objeto
+contém (atributos); o comportamento que o objeto possui (métodos) 
+e a maneira como esses elementos de dados e métodos podem ser acessados (interface). 
+Assim, os objetos possuem características próprias,denotadas por atributos; 
+possuem funções (comportamentos – específicos), dados por métodos e podem ser categorizados,
+agrupados, e uma classe descreverá todos os objetos de um tipo particular.
+Portanto, classe é definição do tipo e representa um conjunto de objetos de mesmo tipo
+e objeto é cada instância derivada da classe; é um elemento do conjunto representado pela
+classe.
+Exemplo:
+classe Carro {
+   modelo: String
+   marca: String
+   cor: String
+   combustivel: String
+   
+}
+Objeto do tipo carro
+   Modelo: Fiesta
+   marca: Ford
+   cor: branco
+   combustivel: gasolina
+  
+2-Atributos de uma classe ou propriedades são o que descreve um intervalo de valores que as instâncias da classe podem apresentar.
+Um atributo é uma variável que pertence a um objeto e os dados de um objeto são armazenados nos seus atributos, ou seja,
+são informações sobre o objeto, dados que podem ser armazenados.
+Alem disso, podem ser coletivos ou individuais.
+Enquanto que, Os métodos são procedimentos ou funções que realizam as ações próprias do objeto. 
+Assim, os métodos são as ações que o objeto pode realizar. 
+Tudo o que o objeto faz é através de seus métodos, pois é através dos seus métodos que um objeto se manifesta, 
+através deles que o objeto interage com os outros objetos.
+Exemplo
+Classe caes
+atributos: nome, peso, cor dos olhos, quantidade de patas
+metodos: falar, andar, comer, dormir
+
+3-Peso - importante - sistema de um petshop (para calcular dose de medicamentos por exemplo)
+Peso - não importante - sistema de um salao de beleza
+
+Tipo de CNH - importante - sistema de uma empresa de autoescola
+Tipo de CNH - não importante - sistema de uma sorveteria
+
+Tipo sanguíneo - importante - sistema de uma clinica ou hospital
+Tipo sanguíneo - não importante - sistema de uma loja de departamentos (roupa, pr exemplo)
+
+Habilidade destra - importante - sistema de corretores manuais
+Habilidade destra - não importante - sistema de uma escola
+
+Percentual de gordura - importante - sistema de uma nutrologa ou nutricionista (que tem que avaliar seus pacientes)
+Percental de gordura - não importante - sistema de uma farmacia
+
+Saldo em conta - importante - sistema de um banco
+Soldo em conta - não importante - sistema de uma empresa de transporte de onibus
+
+Etnia - importante - sistema do IBGE
+Etnia - não importante - sistema de uma secretaria do estado
+
+4- a) Não, pois uma pessoa, sendo atributo, pode possuir mais de uma conta bancária, sendo objeto, e isso prejudicaria 
+o funcionamento do sistema do banco e poderia prejudicar diretamente a segurança.
+b) Nesse caso sim, uma pessoa pode possuir mais de uma conta como atributo e traz a ideia de polimorfismo.
+
+5- Disciplinas, curso, aluno, professor, boletim, diario, historico, documentação pessoal.
+
+6- Em jogo de tiro podemos citar como objetos os personagens, com atributos força, quantidade de vida,
+armas disponiveis, suprimentos de cura, entre outras.
+Além disso, o tem os comportamentos pular, correr, abaixar, levantar, matar, vencer, perder e outros. 
+
+
+
