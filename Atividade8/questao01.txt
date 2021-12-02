@@ -1,0 +1,9 @@
+1.
+a. (F) Objetos sao modelos pra aulas
+b. (V) 
+c. (V) 
+d. (V) 
+e. (F) A variável que seja de uma classe declarada em método é inicializada com null;
+f. (V) 
+g. (V) 
+h. (V) 
