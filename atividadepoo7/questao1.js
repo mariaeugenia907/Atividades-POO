@@ -1,6 +1,6 @@
-var num = [25, 15, 10, 30];
+var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var soma = 0;
-for (var i = 0; i < num.length; i++) {
-    soma += num[i];
+for (var i = 0; i < arr.length; i++) {
+    soma += arr[i];
 }
-console.log('O resultado da soma dos elementos eh ', soma);
+console.log(soma);
