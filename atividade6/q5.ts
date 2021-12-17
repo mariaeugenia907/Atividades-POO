@@ -1,41 +1,35 @@
 class Jogador {
-    forca: number;
+    forca: string;
     nivel: number;
-    pontosatuais: number;
+    pontos: number;
 
-    constructor(forca: number, nivel: number, pontosatuais: number) {
+    constructor(forca: string, nivel: number, pontos: number) {
     this.forca = forca;
     this.nivel = nivel;
-    this.pontosatuais = pontosatuais;
+    this.pontos = pontos;
     }
 
-
-    nivelAtaque() {
+    Ataque() {
     let ataque = this.forca * this.nivel;
     return ataque;
     }
 
-
     atacar(atacado: Jogador) {
-    atacado.pontosatuais -= this.nivelAtaque();
+    atacado.pontos = this.Ataque();
     }
 
-
-    status() {
-    console.log("Forca: ", this.forca, "Nivel: ", this.nivel, "Pontos: ", this.pontosatuais);
+    Personagem() {
+    console.log("Forca: ", this.forca, "Nivel: ", this.nivel, "Pontos: ", this.pontos);
     }
 }
-
 
 let j1: Jogador = new Jogador(80, 20, 800);
 let j2: Jogador = new Jogador(55, 15, 600);
 
-
 j1.atacar(j2);
 j2.atacar(j1);
 
-
 console.log("Jogador1:  ")
-j1.status();
+j1.Personagem();
 console.log("Jogador2:  ")
-j2.status();
+j2.Personagem();

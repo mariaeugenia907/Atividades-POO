@@ -1,28 +1,38 @@
 class Conta {
-    numero: String;
-    saldo: number;
-    constructor(n: String, saldoI: number) {
-        this.numero = n;
-        this.saldo = saldoI;
+    numero: String
+    saldo: number
+
+    constructor(numero, saldo){
+        this.numero = numero;
+        this.saldo = saldo;
     }
+
     sacar(valor: number): void {
-        this.saldo = this.saldo - valor;
+            if(this.saldo >= valor){
+            this.saldo -= valor;
+            return valor;           
+        }
+        return 0;
+    } 
+
+    depositar(valor: number): void{
+        if(valor <= 0){
+            return;         
+        }
+        this.saldo += valor;
     }
-    depositar(valor: number): void {
-        this.saldo = this.saldo + valor;
-    }
-    Saldo(): number {
-        return this.saldo;
-    }
-    transferir(contaDestino: Conta, valor: number): void {
-        this.sacar(valor);
-        contaDestino.depositar(valor);
-    }
-}
-let c1: Conta = new Conta("1", 100);
-let c2: Conta = new Conta("2", 100);
-c1 = c2;
-c1.sacar(10); 
-c1.transferir(c2, 50); 
-console.log(c1.saldo);
-console.log(c2.saldo); 
+
+     transferir(newConta: Conta, valor: number): void {
+        const valorSacado = this.sacar(valor);
+        Conta.depositar(valorSacado);   
+
+    } 
+
+let c01: Conta = new Conta("1", 100);
+let c02: Conta = new Conta("2", 100);
+    
+    c02.transferir(c01, 150);
+    c01.sacar(125);
+    
+    console.log("conta 1: ", c01.saldo);
+    console.log("conta 2: ", c02.saldo);

@@ -1,27 +1,27 @@
 var Conta = /** @class */ (function () {
-    function Conta(n, saldoI) {
-        this.numero = n;
-        this.saldo = saldoI;
+    function Conta(numero, saldo) {
+        this.c2 = new Conta("22", 100);
+        this.c2 = c2;
+        this.numero = numero;
+        this.saldo = saldo;
     }
     Conta.prototype.sacar = function (valor) {
-        this.saldo = this.saldo - valor;
+        if (this.saldo >= valor) {
+            this.saldo -= valor;
+            return valor;
+        }
+        return 0;
     };
     Conta.prototype.depositar = function (valor) {
-        this.saldo = this.saldo + valor;
+        if (valor <= 0) {
+            return;
+        }
+        this. += valor;
     };
-    Conta.prototype.Saldo = function () {
-        return this.saldo;
-    };
-    Conta.prototype.transferir = function (contaDestino, valor) {
-        this.sacar(valor);
-        contaDestino.depositar(valor);
+    Conta.prototype.transferir = function (Destino, valor) {
+        var taxa = 1;
+        var valorSacado = this.sacar(valor, taxa);
+        conta.depositar(valorSacado);
     };
     return Conta;
 }());
-var c1 = new Conta("1", 100);
-var c2 = new Conta("2", 100);
-c1 = c2;
-c1.sacar(10);
-c1.transferir(c2, 50);
-console.log(c1.saldo);
-console.log(c2.saldo);
