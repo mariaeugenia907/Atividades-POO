@@ -21,29 +21,28 @@ class Conta {
         contaDestino.depositar(valor);
     }
 }
-
 class Banco {
-contas: Conta[] = [];
+conta: Conta[] = [];
 
 inserir(conta: Conta): void {
     if (this.consultaIndice(conta.numero) == -1)
-    this.contas.push(conta);
+    this.conta.push(conta);
     }
 
 consultar(numero: String): Conta {
-    let contaConsultada: Conta;
-    for (let conta of this.contas) {
+    let Consultada: Conta;
+    for (let conta of this.conta) {
         if (conta.numero == numero) {
-            contaConsultada = conta
+            Consultada = conta
             }
-    return contaConsultada;
+    return Consultada;
         }
     }
 
     consultaIndice(numero: string): number {
         let indice: number = -1;
-        for (let i: number = 0; i < this.contas.length; i++) {
-            if (this.contas[i].numero == numero) {
+        for (let i: number = 0; i < this.conta.length; i++) {
+            if (this.conta[i].numero == numero) {
                 indice = i;
                 break;
             }
@@ -62,7 +61,7 @@ alterar(conta: Conta): void {
 excluir(numero: string): void {
         let indice: number = this.consultaIndice(numero);
 
-        for (let i: number = indice; i < this.contas.length; i++) {
+        for ( ) {
             this.contas[i] = this.contas[i + 1];
         }
         this.contas.pop();
@@ -79,37 +78,36 @@ sacar(numero: string, valor: number): void {
     }
 
 transferir(numDeb: string, numCred: string, valor: number): void { 
-        if (this.consultaIndice(numDeb) != -1 && this.consultaIndice(numCred) != -1) {
-            var cDeb = this.contas[this.consultaIndice(numDeb)];
-            var cCred = this.contas[this.consultaIndice(numCred)];
+        if ( ) {
+            var cDeb = this.conta[this.consultaIndice(numDeb)];
+            var cCred = this.conta[this.consultaIndice(numCred)];
             cDeb.transferir(cCred, valor);
         }
     }
 
 quantContas(): number {
-    return this.contas.length;
+    return this.conta.length;
     }
 
 valorTodas(): number {
     var soma = 0;
-        for (let conta of this.contas) {
+        for ( ) {
             soma += conta.saldo;
         }
         return soma;
     }
 
 mediaTodas(): number {
-    return this.valorTodas() / this.quantContas();
+    return 
     }
 
 exibirContas(): void {
-    console.log(this.contas)
+    console.log(this.conta)
     }
 }
-let banco: Banco = new Banco;
+Conta = new Conta;
 let c1: Conta = new Conta("11", 2500);
 banco.inserir(c1);
 let c2: Conta = new Conta("22", 5100)
 banco.inserir(c2);
 
-console.log(banco.mediaTodas());

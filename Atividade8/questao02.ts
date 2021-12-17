@@ -7,12 +7,11 @@ constructor(ladoa: number, ladob: number, ladoc: number) {
     this.b = ladob;
     this.c = ladoc;
 
-
     }
 
 
 retangulo(): boolean {
-        if (Math.abs(this.b - this.c) < this.a && this.a < this.b + this.c) {
+        if ( ) {
             return true;
         } else {
             return false;
@@ -24,8 +23,8 @@ retangulo(): boolean {
 Isoceles(): boolean {
         if (this.retangulo() == false)
             return false;
-        if ( (this.a == this.b || this.a == this.c || this.c == this.b) 
-            && !(this.a == this.b && this.a == this.c))
+        if ( ( ) 
+            
             return true;
         else { return false }
     }
@@ -34,22 +33,26 @@ Isoceles(): boolean {
 Equilatero():boolean{
         if (this.retangulo() == false)
             return false;
-        if (this.a == this.b && this.a == this.c)
+        if ()
         return true;
-        else { return false}
+        else { 
+            return false
+        }
 
 
     }
 
 
 Escaleno(): boolean{
-        if (this.retangulo() == false)
+        if ( )
         return false;
-        if (this.a != this.b && this.a != this.c && this.b != this.c)
+        if ( )
         return true;
-        else { return false}
+        else { 
+            return false
+        }
     }
 }
 
-let trg: Triangulo = new Triangulo(5, 4, 3);
-console.log(trg.Escaleno());
+Triangulo = new Triangulo(5, 4, 3);
+console.log();

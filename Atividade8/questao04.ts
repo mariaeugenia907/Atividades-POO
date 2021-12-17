@@ -1,34 +1,33 @@
 class Postagem {
-    id: number;
+    chave: number;
     texto: string;
-    likes: number;
+    like: number;
 
-constructor(id: number, texto: string) {
-    this.id = id;
+constructor(id: number, texto: string, like: number) {
+    this.chave = id;
     this.texto = texto;
     }
-    curtir(likes: number): void {
-        this.likes = likes;
+    curtir(like: number): void {
+        this.like = like;
     }
-    toString(): string {
+    String(): string {
     var log = this.texto;
-    return log + "numero de Likes: " + this.likes.toString();
+    return log + "numero de Likes: " + this.like.String();
     }
 }
 
 class Microblog {
-    arrayPosts: Postagem[] = [];
+    array: Postagem[] = [];
 
 postar(post: Postagem): void {
-    if (this.consultaIndice(post.id) == -1)
-    this.arrayPosts.push(post);
+    if (this.consultaIndice(post.chave) == -1)
+    this.array.push(post);
     }
-
 
 consultaIndice(numero: number): number {
     let indice: number = -1;
-    for (let i: number = 0; i < this.arrayPosts.length; i++) {
-    if (this.arrayPosts[i].id == numero) {
+    for (let i: number = 0; i < this.array.length; i++) {
+    if (this.array[i].chave == numero) {
        indice = i;
         break;
             }
@@ -36,44 +35,41 @@ consultaIndice(numero: number): number {
     return indice;
     }
 
-
 excluir(numero: number): void {
    let indice: number = this.consultaIndice(numero);
 
-
-    for (let i: number = indice; i < this.arrayPosts.length; i++) {
-            this.arrayPosts[i] = this.arrayPosts[i + 1];
+    for (let i: number = indice; i < this.array.length; i++) {
+            this.array[i] = this.array[i + 1];
         }
-        this.arrayPosts.pop();
+        
     }
 
-curtir(likes: number, id: number): void {
-    if (this.consultaIndice(id) != -1)
-        this.arrayPosts[this.consultaIndice(id)].curtir(likes);
-        else { console.log("Erro", id, ": Post nao encontrado") }
+curtir(like: number, chave: number): void {
+    if (this.consultaIndice(chave) != -1)
+        this.array[this.consultaIndice(chave)].curtir(like);
+        else { console.log("Erro", chave, ": Post nao encontrado") }
     }
 
 maisCurtida(): Postagem {
     var maior = 0, maiorPost;
-    for (let post of this.arrayPosts) {
-        if (post.likes > maior) {
-            maior = post.likes;
-            maiorPost = post;
-            }
+    for (let post of this.array) {
+        if (post.like > maior) {
+            maior = post.like;
+               }
         }
         return maiorPost;
     }
 
-toString(): string {
+String(): string {
     let logTotal: string = "   ";
-    for (let post of this.arrayPosts) {
-        logTotal += post.toString() + "  ";
+    for (let post of this.array) {
+        logTotal += post.String() + "  ";
         }
         return logTotal;
     }
 
 imprimirPosts(): void {
-    console.log(this.arrayPosts)
+    console.log(this.array)
     }
 }
 let blog: Microblog = new Microblog();
@@ -95,4 +91,4 @@ blog.curtir(250, 2);
 blog.curtir(550, 3);
 blog.curtir(600, 4);
 
-console.log(blog.toString());
+console.log(blog.String());
